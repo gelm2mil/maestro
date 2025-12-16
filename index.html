@@ -6,6 +6,222 @@
 <title>Panel Maestro GELM – PMT</title>
 
 <style>
+/* ================= VARIABLES ================= */
+:root{
+  --blue:#00eaff;
+  --blue-soft:#7fefff;
+  --green:#00ff88;
+  --bg:#02050b;
+  --card-bg:rgba(0,0,0,.45);
+}
+
+/* ================= RESET ================= */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+/* ================= BODY ================= */
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:
+    radial-gradient(circle at top, #0b1b33, #02050b 65%);
+  color:var(--blue);
+}
+
+/* ================= HEADER ================= */
+header{
+  padding:28px 14px;
+  text-align:center;
+  background:linear-gradient(90deg,#061a2a,#160a2a);
+  border-bottom:1px solid rgba(0,255,136,.45);
+}
+
+header h1{
+  font-size:24px;
+  color:var(--blue);
+  text-shadow:
+    0 0 10px rgba(0,234,255,.9),
+    0 0 22px rgba(0,234,255,.5);
+}
+
+header p{
+  margin-top:6px;
+  font-size:13px;
+  color:var(--blue-soft);
+  opacity:.9;
+}
+
+/* ================= LAYOUT ================= */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:26px 20px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+}
+
+/* ================= CARDS ================= */
+.card{
+  background:var(--card-bg);
+  border:1px solid rgba(0,255,136,.65);
+  border-radius:18px;
+  padding:16px;
+  box-shadow:
+    0 0 14px rgba(0,255,136,.2);
+}
+
+.card h2{
+  font-size:16px;
+  margin-bottom:12px;
+  color:var(--green);
+  text-shadow:0 0 8px rgba(0,255,136,.7);
+}
+
+/* TAG */
+.tag{
+  font-size:11px;
+  margin-left:6px;
+  padding:2px 7px;
+  border-radius:10px;
+  border:1px solid var(--green);
+  color:var(--green);
+  box-shadow:0 0 6px rgba(0,255,136,.45);
+}
+
+/* ================= BUTTONS ================= */
+.btn{
+  display:block;
+  padding:10px 14px;
+  margin:8px 0;
+  border-radius:14px;
+  text-decoration:none;
+  color:var(--blue);
+  border:1px solid rgba(0,255,136,.75);
+  background:rgba(0,0,0,.4);
+  box-shadow:0 0 6px rgba(0,255,136,.25);
+  transition:.25s ease;
+}
+
+.btn:hover{
+  background:rgba(0,255,136,.08);
+  box-shadow:
+    0 0 10px rgba(0,255,136,.7),
+    0 0 18px rgba(0,234,255,.45);
+  transform:translateY(-1px);
+}
+
+/* ================= TEXT SMALL ================= */
+.note{
+  font-size:12px;
+  margin-top:6px;
+  color:var(--blue-soft);
+  opacity:.8;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  text-align:center;
+  padding:16px;
+  font-size:12px;
+  color:var(--blue-soft);
+  opacity:.7;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🚦 Panel Maestro GELM – PMT</h1>
+  <p>Acceso rápido a módulos | Chimaltenango | Abrir en nueva pestaña</p>
+</header>
+
+<div class="container">
+<div class="grid">
+
+<!-- SISTEMA 2026 -->
+<div class="card">
+  <h2>📆 Sistema 2026 <span class="tag">USO DIARIO</span></h2>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/2026/index.html">Inicio 2026</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/2026/agen2026.html">Agenda 2026</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/2026/denuncias.html">Denuncias 2026</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/2026/operativos.html">Operativos 2026</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/2026/respaldo.html">Respaldo</a>
+  <div class="note">Bitácora, agenda y denuncias diarias.</div>
+</div>
+
+<!-- TRANSPORTES PMT -->
+<div class="card">
+  <h2>🚍 transportes_PMT</h2>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/transportes_PMT/index.html">Inicio</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/transportes_PMT/registro.html">Registro</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/transportes_PMT/consultas.html">Consultas</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/transportes_PMT/denuncias.html">Denuncias</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/transportes_PMT/supervision.html">Supervisión</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/transportes_PMT/panel.html">Panel</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/transportes_PMT/educacion.html">Educación</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/transportes_PMT/galeria.html">Galería</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/transportes_PMT/info.html">Info</a>
+</div>
+
+<!-- PMT CHIMALTENANGO -->
+<div class="card">
+  <h2>🏛️ pmt_Chimaltenango</h2>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/pmt_Chimaltenango/index.html">Index</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/pmt_Chimaltenango/inicio.html">Inicio</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/pmt_Chimaltenango/transportes.html">Transportes</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/pmt_Chimaltenango/operativos.html">Operativos</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/pmt_Chimaltenango/denuncias_pmt.html">Denuncias</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/pmt_Chimaltenango/educacion.html">Educación</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/pmt_Chimaltenango/redes.html">Redes</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/pmt_Chimaltenango/contacto.html">Contacto</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/pmt_Chimaltenango/publica.html">Vía Pública</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/pmt_Chimaltenango/valores.html">Valores</a>
+</div>
+
+<!-- BUSCADOR -->
+<div class="card">
+  <h2>🔎 Buscador</h2>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/buscador/index.html">Buscador de placas</a>
+</div>
+
+<!-- REPRODUCTORES -->
+<div class="card">
+  <h2>🎵 Reproductores</h2>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/music/index.html">music</a>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/play/index.html">play</a>
+  <div class="note">Uso libre, sin límite por uso normal.</div>
+</div>
+
+<!-- GELM BASE -->
+<div class="card">
+  <h2>🧩 GELM base</h2>
+  <a class="btn" target="_blank" href="https://gelm2mil.github.io/gelm/index.html">gelm</a>
+</div>
+
+</div>
+</div>
+
+<footer>
+  todos los derechos reservados by GELM · 2014–2077
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel Maestro GELM – PMT</title>
+
+<style>
 :root{
   --neon-blue:#00eaff;
   --neon-blue-soft:#7fefff;
