@@ -8,8 +8,9 @@
 <style>
 :root{
   --neon-blue:#00eaff;
+  --neon-blue-soft:#7fefff;
   --neon-green:#00ff88;
-  --bg-dark:#05080f;
+  --bg-dark:#03060c;
 }
 
 *{box-sizing:border-box}
@@ -17,61 +18,75 @@
 body{
   margin:0;
   font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(circle at top, #0b1630, #03060c 60%);
+  background: radial-gradient(circle at top, #0b1630, #03060c 65%);
   color:var(--neon-blue);
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 header{
-  padding:24px 14px;
+  padding:26px 14px;
   text-align:center;
   background:linear-gradient(90deg,#061a2a,#140a2a);
-  border-bottom:1px solid rgba(0,255,136,.4);
+  border-bottom:1px solid rgba(0,255,136,.45);
 }
 
 header h1{
   margin:0;
   font-size:22px;
   color:var(--neon-blue);
-  text-shadow:0 0 10px rgba(0,234,255,.6);
+  text-shadow:
+    0 0 8px rgba(0,234,255,.85),
+    0 0 18px rgba(0,234,255,.45);
 }
 
 header p{
   margin:6px 0 0;
   font-size:13px;
-  opacity:.85;
+  color:var(--neon-blue-soft);
+  opacity:.9;
 }
 
-/* LAYOUT */
+/* ================= LAYOUT ================= */
 .container{
   max-width:1200px;
   margin:0 auto;
-  padding:20px;
+  padding:22px;
 }
 
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:16px;
+  gap:18px;
 }
 
-/* CARDS */
+/* ================= CARDS ================= */
 .card{
   background:rgba(0,0,0,.45);
   border:1px solid rgba(0,255,136,.6);
   border-radius:16px;
   padding:14px;
-  box-shadow:0 0 14px rgba(0,255,136,.15);
+  box-shadow:0 0 14px rgba(0,255,136,.18);
 }
 
 .card h2{
   margin:0 0 12px;
   font-size:16px;
-  color:var(--neon-blue);
-  text-shadow:0 0 6px rgba(0,234,255,.6);
+  color:var(--neon-green);
+  text-shadow:0 0 6px rgba(0,255,136,.6);
 }
 
-/* BUTTONS */
+/* TAG USO DIARIO */
+.tag-uso{
+  font-size:11px;
+  margin-left:6px;
+  padding:2px 6px;
+  border-radius:8px;
+  border:1px solid var(--neon-green);
+  color:var(--neon-green);
+  box-shadow:0 0 6px rgba(0,255,136,.45);
+}
+
+/* ================= BUTTONS ================= */
 .btn{
   display:block;
   margin:8px 0;
@@ -88,23 +103,25 @@ header p{
 .btn:hover{
   background:rgba(0,255,136,.08);
   box-shadow:
-    0 0 8px rgba(0,255,136,.6),
-    0 0 14px rgba(0,234,255,.4);
+    0 0 8px rgba(0,255,136,.65),
+    0 0 14px rgba(0,234,255,.45);
 }
 
-/* TEXT SMALL */
+/* ================= TEXT SMALL ================= */
 .mini{
   font-size:12px;
   opacity:.75;
   margin-top:6px;
+  color:var(--neon-blue-soft);
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer{
   text-align:center;
   font-size:12px;
-  opacity:.6;
+  opacity:.65;
   padding:16px;
+  color:var(--neon-blue-soft);
 }
 </style>
 </head>
@@ -121,7 +138,7 @@ footer{
 
   <!-- SISTEMA 2026 -->
   <div class="card">
-    <h2>📆 Sistema 2026</h2>
+    <h2>📆 Sistema 2026 <span class="tag-uso">USO DIARIO</span></h2>
     <a class="btn" target="_blank" href="https://gelm2mil.github.io/2026/index.html">Inicio 2026</a>
     <a class="btn" target="_blank" href="https://gelm2mil.github.io/2026/agen2026.html">Agenda 2026</a>
     <a class="btn" target="_blank" href="https://gelm2mil.github.io/2026/denuncias.html">Denuncias 2026</a>
