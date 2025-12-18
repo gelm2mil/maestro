@@ -1,23 +1,86 @@
-/* ================= NEON BORDER ANIMADO ================= */
-.card{
-  position:relative;
-  overflow:hidden;
+/* ================= VARIABLES ================= */
+:root{
+  --blue:#00eaff;
+  --blue-soft:#7fefff;
+  --green:#00ff88;
+  --bg:#02050b;
+  --card-bg:rgba(0,0,0,.45);
 }
 
-/* línea animada */
+/* ================= RESET ================= */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+/* ================= BODY ================= */
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:
+    radial-gradient(circle at top, #0b1b33, #02050b 65%);
+  color:var(--blue);
+}
+
+/* ================= HEADER ================= */
+header{
+  padding:28px 14px;
+  text-align:center;
+  background:linear-gradient(90deg,#061a2a,#160a2a);
+  border-bottom:1px solid rgba(0,255,136,.45);
+}
+
+header h1{
+  font-size:24px;
+  text-shadow:
+    0 0 10px rgba(0,234,255,.9),
+    0 0 22px rgba(0,234,255,.5);
+}
+
+header p{
+  margin-top:6px;
+  font-size:13px;
+  color:var(--blue-soft);
+  opacity:.9;
+}
+
+/* ================= LAYOUT ================= */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:26px 20px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+/* ================= CARD ================= */
+.card{
+  position:relative;
+  background:var(--card-bg);
+  border-radius:18px;
+  padding:16px;
+  overflow:hidden;
+  box-shadow:0 0 14px rgba(0,255,136,.2);
+}
+
+/* BORDE NEON ANIMADO */
 .card::before{
   content:"";
   position:absolute;
   inset:0;
+  padding:1.6px;
   border-radius:18px;
-  padding:1.5px;
   background:
     linear-gradient(
       90deg,
       transparent,
-      #00ff88,
-      #00eaff,
-      #00ff88,
+      var(--green),
+      var(--blue),
+      var(--green),
       transparent
     );
   background-size:300% 300%;
@@ -30,21 +93,77 @@
   pointer-events:none;
 }
 
-/* brillo suave interno */
 .card::after{
   content:"";
   position:absolute;
   inset:0;
   border-radius:18px;
   box-shadow:
-    inset 0 0 18px rgba(0,255,136,.15),
-    0 0 20px rgba(0,234,255,.12);
+    inset 0 0 18px rgba(0,255,136,.18),
+    0 0 22px rgba(0,234,255,.12);
   pointer-events:none;
 }
 
-/* animación */
 @keyframes borderMove{
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
+}
+
+/* ================= TITULOS ================= */
+.card h2{
+  font-size:16px;
+  margin-bottom:12px;
+  color:var(--green);
+  text-shadow:0 0 8px rgba(0,255,136,.7);
+}
+
+/* TAG */
+.tag{
+  font-size:11px;
+  margin-left:6px;
+  padding:2px 7px;
+  border-radius:10px;
+  border:1px solid var(--green);
+  color:var(--green);
+  box-shadow:0 0 6px rgba(0,255,136,.45);
+}
+
+/* ================= BUTTONS ================= */
+.btn{
+  display:block;
+  padding:10px 14px;
+  margin:8px 0;
+  border-radius:14px;
+  text-decoration:none;
+  color:var(--blue);
+  background:rgba(0,0,0,.4);
+  border:1px solid rgba(0,255,136,.75);
+  box-shadow:0 0 6px rgba(0,255,136,.25);
+  transition:.25s ease;
+}
+
+.btn:hover{
+  background:rgba(0,255,136,.08);
+  box-shadow:
+    0 0 12px rgba(0,255,136,.7),
+    0 0 22px rgba(0,234,255,.45);
+  transform:translateY(-1px);
+}
+
+/* ================= NOTE ================= */
+.note{
+  font-size:12px;
+  margin-top:6px;
+  color:var(--blue-soft);
+  opacity:.8;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  text-align:center;
+  padding:16px;
+  font-size:12px;
+  color:var(--blue-soft);
+  opacity:.7;
 }
