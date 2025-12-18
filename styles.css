@@ -167,3 +167,89 @@ footer{
   color:var(--blue-soft);
   opacity:.7;
 }
+/* ================= HEADER AVANZADO ================= */
+.header{
+  padding:28px 14px;
+  text-align:center;
+  background:linear-gradient(90deg,#061a2a,#160a2a);
+  border-bottom:1px solid rgba(0,255,136,.45);
+}
+
+.title-line{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+}
+
+.header h1{
+  font-size:24px;
+  color:var(--blue);
+  text-shadow:
+    0 0 10px rgba(0,234,255,.9),
+    0 0 22px rgba(0,234,255,.5);
+}
+
+/* ================= SUBTITLE ================= */
+.subtitle{
+  margin-top:6px;
+  font-size:13px;
+  color:var(--blue-soft);
+  opacity:.9;
+  letter-spacing:.4px;
+}
+
+/* ================= SEMÁFORO ================= */
+.semaforo{
+  width:18px;
+  height:44px;
+  background:#050b14;
+  border:1px solid rgba(0,255,136,.5);
+  border-radius:6px;
+  padding:3px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  box-shadow:
+    0 0 8px rgba(0,255,136,.4),
+    inset 0 0 6px rgba(0,0,0,.8);
+}
+
+.luz{
+  width:100%;
+  height:10px;
+  border-radius:50%;
+  opacity:.25;
+  box-shadow:0 0 4px rgba(0,0,0,.8);
+}
+
+/* COLORES */
+.rojo{ background:#ff0033; animation:rojo 6s infinite; }
+.amarillo{ background:#ffd000; animation:amarillo 6s infinite; }
+.verde{ background:#00ff88; animation:verde 6s infinite; }
+
+/* ================= ANIMACIONES ================= */
+@keyframes rojo{
+  0%, 33%{
+    opacity:1;
+    box-shadow:0 0 10px #ff0033;
+  }
+  34%,100%{opacity:.25}
+}
+
+@keyframes amarillo{
+  0%,33%{opacity:.25}
+  34%,66%{
+    opacity:1;
+    box-shadow:0 0 10px #ffd000;
+  }
+  67%,100%{opacity:.25}
+}
+
+@keyframes verde{
+  0%,66%{opacity:.25}
+  67%,100%{
+    opacity:1;
+    box-shadow:0 0 10px #00ff88;
+  }
+}
